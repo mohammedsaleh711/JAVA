@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // read input
+        int numFours = sc.nextInt();
+        int numSixes = sc.nextInt();
+        
+        // calculate total score
+        int totalScore = (numFours * 4) + (numSixes * 6);
+        
+        // output result
+        if (numFours >= 0 && numSixes >= 0) {
+            System.out.println(totalScore);
+        } else {
+            System.out.println(0);
+        }
+    }
+}
