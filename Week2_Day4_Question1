@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int price1 = scanner.nextInt();
+        int price2 = scanner.nextInt();
+        int price3 = scanner.nextInt();
+
+        if (price1 <= 0 || price2 <= 0 || price3 <= 0) {
+            System.out.println("Invalid Input");
+            return;
+        }
+
+        int totalCost = 6 * (int)(price1 * 0.9) + 4 * (int)(price2 * 0.8) + 3 * (int)(price3 * 0.7);
+        System.out.println(totalCost);
+    }
+}
