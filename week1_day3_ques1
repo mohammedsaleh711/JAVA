@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+class BankAccount {
+    private long accountNumber;
+    private String accountHolderName;
+    private char gender;
+    private int currentBalance;
+
+    public BankAccount(long accountNumber, String accountHolderName, char gender, int currentBalance) {
+        this.accountNumber = accountNumber;
+        this.accountHolderName = accountHolderName;
+        this.gender = gender;
+        this.currentBalance = currentBalance;
+    }
+
+    public void withdraw(int amount) {
+        if (amount <= currentBalance) {
+            currentBalance -= amount;
+            System.out.println("Hi " + getSalutation() + "!");
+            System.out.println("Your Account Balance after withdrawal is " + currentBalance + ".");
+        } else {
+            System.out.println("Hi " + getSalutation() + "!");
+            System.out.println("Insufficient Funds! You cannot withdraw " + amount + ".");
+        }
+    }
+
+    private String getSalutation() {
+        if (gender == 'M' || gender == 'm') {
+            return "Mr. " + accountHolderName;
+        } else if (gender == 'F' || gender == 'f') {
+            return "Ms. " + accountHolderName;
+        } else {
+            return accountHolderName;
+        }
+    }
+}
+
+public class BankAccountWithdrawal {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Account Number: ");
+        long accountNumber = sc.nextLong();
+        sc.nextLine(); // clear the buffer
+        System.out.println("Enter Account Holder Name: ");
+        String accountHolderName = sc.nextLine();
+        System.out.println("Enter Gender (M/F): ");
+        char gender = sc.next().charAt(0);
+        System.out.println("Enter Amount to be Withdrawn: ");
+        int amount = sc.nextInt();
+
+        BankAccount account = new BankAccount(accountNumber, accountHolderName, gender, 20000);
+        account.withdraw(amount);
+
+        sc.close();
+    }
+}
