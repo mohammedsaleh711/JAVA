@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read the three input values
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
+
+        // Round the input values up to the nearest integer
+        int aInt = (int) Math.ceil(a);
+        int bInt = (int) Math.ceil(b);
+        int cInt = (int) Math.ceil(c);
+
+        // Print the rounded up values
+        System.out.println(aInt + " " + bInt + " " + cInt);
+
+        sc.close();
+    }
+}
