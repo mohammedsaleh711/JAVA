@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class CoinGame {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] coins = new int[7];
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 7; j++) {
+                coins[j] = sc.nextInt();
+                sum += coins[j];
+            }
+            if (sum == 56) {
+                System.out.println(1);
+            } else {
+                System.out.println(0);
+            }
+            sum = 0;
+        }
+        sc.close();
+    }
+}
