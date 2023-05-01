@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+       
+        double borrowedAmount = sc.nextDouble();
+
+       
+        double totalAmount = borrowedAmount * 1.1;
+
+       
+        double emi = totalAmount / 12;
+
+        
+        emi = Math.round(emi * 100) / 100.0;
+
+       
+        System.out.println(totalAmount + " " + emi);
+
+        sc.close();
+    }
+}
