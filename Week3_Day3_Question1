@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int amount = sc.nextInt();
+
+        if (amount < 100 || amount > 20000 || amount % 100 != 0) {
+            System.out.println("Invalid Input");
+            sc.close();
+            return;
+        }
+
+        int note2000 = amount / 2000;
+        amount = amount % 2000;
+        int note500 = amount / 500;
+        amount = amount % 500;
+        int note200 = amount / 200;
+        amount = amount % 200;
+        int note100 = amount / 100;
+
+        System.out.println(note2000 + " 2000 Notes");
+        System.out.println(note500 + " 500 Notes");
+        System.out.println(note200 + " 200 Notes");
+        System.out.println(note100 + " 100 Notes");
+
+        sc.close();
+    }
+}
