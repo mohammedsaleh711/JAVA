@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class PerfectCubeChecker {
+    public static void main(String[] args) {
+        // Read input from user
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter an integer N:");
+        int N = scanner.nextInt();
+        scanner.close();
+
+        // Check if N is a perfect cube
+        String result = isPerfectCube(N) ? "Perfect Cube" : "Not Perfect Cube";
+
+        // Print the result
+        System.out.println(result);
+    }
+
+    // Function to check if a number is a perfect cube
+    public static boolean isPerfectCube(int num) {
+        int cubeRoot = (int) Math.round(Math.pow(num, 1.0 / 3.0));
+        return num == cubeRoot * cubeRoot * cubeRoot;
+    }
+}
