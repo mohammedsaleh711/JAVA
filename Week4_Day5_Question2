@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // read first array
+        String[] array1 = scanner.nextLine().split(" ");
+        
+        // read second array
+        String[] array2 = scanner.nextLine().split(" ");
+
+        // count common elements
+        int count = 0;
+        for (String element : array1) {
+            for (String otherElement : array2) {
+                if (element.equals(otherElement)) {
+                    count++;
+                    break; // element found, break out of inner loop
+                }
+            }
+        }
+
+        // display result
+        System.out.println(count);
+    }
+}
