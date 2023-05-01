@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class DivisibleNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Take input from user
+        System.out.print("Enter the value of X: ");
+        int X = scanner.nextInt();
+        System.out.print("Enter the value of Y: ");
+        int Y = scanner.nextInt();
+        System.out.print("Enter the value of N: ");
+        int N = scanner.nextInt();
+
+        // Check if any divisible numbers exist
+        boolean divisibleNumbersExist = false;
+
+        // Loop through the range from X to Y (inclusive)
+        for (int i = X; i <= Y; i++) {
+            // Check if the current number is divisible by N
+            if (i % N == 0) {
+                System.out.print(i + " ");
+                divisibleNumbersExist = true;
+            }
+        }
+
+        // If no divisible numbers exist, print "NO OUTPUT"
+        if (!divisibleNumbersExist) {
+            System.out.println("NO OUTPUT");
+        }
+
+        scanner.close();
+    }
+}
