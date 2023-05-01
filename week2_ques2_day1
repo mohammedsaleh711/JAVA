@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class Shopping {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int nehaItems = scanner.nextInt();
+        int nishaItems = scanner.nextInt();
+        int totalItems = nehaItems + nishaItems;
+        System.out.println(totalItems);
+    }
+}
