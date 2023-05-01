@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class MeanCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Take input from user
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+        System.out.print("Enter the third number: ");
+        int num3 = scanner.nextInt();
+
+        // Calculate the mean
+        double mean = (num1 + num2 + num3) / 3.0;
+
+        // Display the result with required format
+        System.out.printf("Mean: %.1f", mean);
+
+        scanner.close();
+    }
+}
