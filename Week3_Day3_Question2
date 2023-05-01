@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read input (number and operation)
+        int num = sc.nextInt();
+        int op = sc.nextInt();
+
+        // Perform operation and print output
+        switch(op) {
+            case 1:
+                if(num % 2 == 0) {
+                    System.out.println("YES");
+                } else {
+                    System.out.println("NO");
+                }
+                break;
+            case 2:
+                if(num % 2 != 0) {
+                    System.out.println("YES");
+                } else {
+                    System.out.println("NO");
+                }
+                break;
+            case 3:
+                boolean isPrime = true;
+                if(num < 2) {
+                    isPrime = false;
+                } else {
+                    for(int i = 2; i <= Math.sqrt(num); i++) {
+                        if(num % i == 0) {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+                }
+                if(isPrime) {
+                    System.out.println("YES");
+                } else {
+                    System.out.println("NO");
+                }
+                break;
+            case 4:
+                int fact = 1;
+                for(int i = 2; i <= num; i++) {
+                    fact *= i;
+                }
+                System.out.println(fact);
+                break;
+            default:
+                System.out.println("Invalid Input");
+                break;
+        }
+
+        sc.close();
+    }
+}
