@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class ProductRating {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double rating = scanner.nextDouble();
+
+        if (rating >= 1 && rating <= 5) {
+            System.out.println("Thanks");
+        } else {
+            System.out.println("Error: 101");
+        }
+    }
+}
